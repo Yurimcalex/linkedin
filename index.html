@@ -7,14 +7,18 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<!-- ******************* navigation bar ****************** -->
+	<!-- ------------------- navigation bar ------------------ -->
 	<nav class="navbar">
+		<!-- ----------------- nav left side ------------------- -->
 		<div class="navbar-left">
 			<a href="index.html" class="logo"><img src="images/logo.png" alt="logo"></a>
 			<div class="search-box">
 				<img src="images/search.png" alt="search">
 				<input type="text" placeholder="Search"></div>
 		</div>
+		<!-- ----------------- end nav left side --------------- -->
+
+		<!-- ----------------- nav center ---------------------- -->
 		<div class="navbar-center">
 			<ul>
 				<li><a href="#" class="active-link"><img src="images/home.png" alt="home"> <span>Home</span></a></li>
@@ -24,11 +28,17 @@
 				<li><a href="#"><img src="images/notification.png" alt="home"> <span>Notifications</span></a></li>
 			</ul>
 		</div>
+		<!-- ----------------- end nav center ------------------ -->
+
+		<!-- ----------------- nav right side ------------------ -->
 		<div class="navbar-right">
 			<div class="online">
 				<img src="images/user-1.png" alt="user" class="nav-profile-img" onclick="toggleMenu()">
 			</div>
 		</div>
+		<!-- ----------------- end nav right side -------------- -->
+
+		<!-- ----------------- nav profile menu ---------------- -->
 		<div class="profile-menu-wrap" id="profileMenu">
 			<div class="profile-menu">
 				<div class="user-info">
@@ -66,12 +76,15 @@
 				</a>
 			</div>
 		</div>
+		<!-- ----------------- end nav profile menu ------------ -->
 	</nav>
-
+	<!-- ------------------- end navigation bar -------------- -->
 	
+
 	<div class="container">
-		<!-- ******************* left sidebar ******************** -->
+		<!-- ------------------- left sidebar ------------------ -->
 		<div class="left-sidebar">
+			<!-- ----------------- sidebar profile box ----------- -->
 			<div class="sidebar-profile-box">
 				<img src="images/cover-pic.png" alt="cover" width="100%">
 				<div class="sidebar-profile-info">
@@ -89,6 +102,9 @@
 					<a href="#"><img src="images/premium.png" alt="premium"> Try Premium</a>
 				</div>
 			</div>
+			<!-- ----------------- end sidebar profile box ------- -->
+
+			<!-- ----------------- sidebar activity -------------- -->
 			<div class="sidebar-activity" id="sidebarActivity">
 				<h3>RECENT</h3>
 				<a href="#"><img src="images/recent.png" alt="recent"> Web Development</a>
@@ -109,11 +125,15 @@
 					<a href="#">Discover more</a>
 				</div>
 			</div>
+			<!-- ----------------- end sidebar activity ---------- -->
+
 			<p id="showMoreLink" onclick="toggleActivity()">Show more<b>+</b></p>
 		</div>
+		<!-- ------------------- end left sidebar -------------- -->
 
-		<!-- ******************* main content ******************** -->
+		<!-- ------------------- main content ------------------ -->
 		<div class="main-content">
+			<!-- ------------------- create post section --------- -->
 			<div class="create-post">
 				<div class="create-post-input">
 					<img src="images/user-1.png" alt="user">
@@ -126,10 +146,17 @@
 					<li>Post</li>
 				</div>
 			</div>
+			<!-- ------------------- end create post section ----- -->
+
+			<!-- ------------------- sort by section ------------- -->
 			<div class="sort-by">
 				<hr>
 				<p>Sort by: <span>top <img src="images/down-arrow.png" alt="down-arrow"></span></p>
 			</div>
+			<!-- ------------------- end sort by section --------- -->
+
+			<!-- ------------------- posts ----------------------- -->
+			<!-- ------------------- posts 1 --------------------- -->
 			<div class="post">
 				<div class="post-author">
 					<img src="images/user-3.png" alt="user">
@@ -175,6 +202,8 @@
 					</div>
 				</div>
 			</div>
+			<!-- ------------------- end posts 1 ----------------- -->
+			<!-- ------------------- posts 2 --------------------- -->
 			<div class="post">
 				<div class="post-author">
 					<img src="images/user-4.png" alt="user">
@@ -220,6 +249,8 @@
 					</div>
 				</div>
 			</div>
+			<!-- ------------------- end posts 2 ----------------- -->
+			<!-- ------------------- posts 3 --------------------- -->
 			<div class="post">
 				<div class="post-author">
 					<img src="images/user-4.png" alt="user">
@@ -265,6 +296,8 @@
 					</div>
 				</div>
 			</div>
+			<!-- ------------------- end posts 3 ----------------- -->
+			<!-- ------------------- posts 4 --------------------- -->
 			<div class="post">
 				<div class="post-author">
 					<img src="images/user-3.png" alt="user">
@@ -310,10 +343,14 @@
 					</div>
 				</div>
 			</div>
+			<!-- ------------------- end posts 4 ----------------- -->
+			<!-- ------------------- end posts ------------------- -->
 		</div>
+		<!-- ------------------- end main content -------------- -->
 
-		<!-- ******************* right sidebar ******************* -->
+		<!-- ------------------- right sidebar ----------------- -->
 		<div class="right-sidebar">
+			<!-- ---------------- news --------------------------- -->
 			<div class="sidebar-news">
 				<img src="images/more.png" alt="more" class="info-icon">
 				<h3>Trending News</h3>
@@ -329,6 +366,9 @@
 				<span>1d ago &middot; 4,205 readers</span>
 				<a class="read-more-link">Read More</a>
 			</div>
+			<!-- ---------------- end news ----------------------- -->
+
+			<!-- ---------------- ad ----------------------------- -->
 			<div class="sidebar-ad">
 				<small>Ad &middot; &middot; &middot;</small>
 				<p>Master of 5 principles web design</p>
@@ -339,6 +379,9 @@
 				<b>Brand and Demand in Xiaomi</b>
 				<a href="#" class="ad-link">Learn More</a>
 			</div>
+			<!-- ---------------- end ad ------------------------- -->
+
+			<!-- ---------------- useful links ------------------- -->
 			<div class="sidebar-useful-links">
 				<a href="#">About</a>
 				<a href="#">Accessiblity</a>
@@ -352,7 +395,9 @@
 					<p>Linkedup &#169; 2022. All right reserved</p>
 				</div>
 			</div>
+			<!-- ---------------- end useful links --------------- -->
 		</div>
+		<!-- ------------------- end right sidebar ------------- -->
 	</div>
 
 	<script>

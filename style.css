@@ -28,12 +28,41 @@ a {
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* ----- nav left side ----- */
+.navbar-left {
+	display: flex;
+	align-items: center;
+}
+
 .logo img {
 	width: 30px;
 	margin-right: 15px;
 	display: block;
 }
 
+.search-box {
+	background: #f0f2f5;
+	width: 250px;
+	border-radius: 20px;
+	display: flex;
+	align-items: center;
+	padding: 0 15px;
+}
+
+.search-box img {
+	width: 14px;
+}
+
+.search-box input {
+	width: 100%;
+	background: transparent;
+	padding: 8px;
+	outline: none;
+	border: none;
+}
+/* --- end nav left side --- */
+
+/* --- nav center ---------- */
 .navbar-center ul li {
 	display: inline-block;
 	list-style: none;
@@ -66,7 +95,9 @@ a {
 .navbar-center ul li a img {
 	width: 30px;
 }
+/* --- end nav center ------ */
 
+/* --- nav right side ------ */
 .nav-profile-img {
 	width: 40px;
 	border-radius: 50%;
@@ -90,32 +121,78 @@ a {
 	background: #41db51;
 	position: absolute;
 }
+/* --- end nav right side -- */
 
-.search-box {
-	background: #f0f2f5;
-	width: 250px;
-	border-radius: 20px;
+/* --- menu drop-down ------ */
+.profile-menu-wrap {
+	position: absolute;
+	top: 100%;
+	right: 5%;
+	width: 320px;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.5s;
+}
+
+.profile-menu-wrap.open-menu {
+	max-height: 400px;
+}
+
+.profile-menu {
+	background: #222;
+	color: #fff;
+	padding: 20px;
+	margin: 10px;
+}
+
+.user-info {
 	display: flex;
 	align-items: center;
-	padding: 0 15px;
 }
 
-.navbar-left {
-	display: flex;
-	align-items: center;
+.user-info img {
+	width: 50px;
+	border-radius: 50%;
+	margin-right: 15px;
 }
 
-.search-box img {
-	width: 14px;
+.user-info h3 {
+	font-weight: 500;
+	margin-bottom: -7px;
 }
 
-.search-box input {
+.user-info a {
+	color: #c9dbf8;
+	font-size: 13px;
+}
+
+.profile-menu hr {
+	border: 0;
+	height: 1px;
 	width: 100%;
-	background: transparent;
-	padding: 8px;
-	outline: none;
-	border: none;
+	background: #fff;
+	margin: 15px 0 10px;
 }
+
+.profile-menu-link {
+	display: flex;
+	align-items: center;
+	color: #fff;
+	margin: 12px 0;
+	font-size: 14px;
+}
+
+.profile-menu-link p {
+	width: 100%;
+}
+
+.profile-menu-link img {
+	width: 35px;
+	border-radius: 50%;
+	margin-right: 15px;
+}
+/* --- menu drop-down ------ */
+/* ------------- end navbar --------- */
 
 
 .container {
@@ -125,6 +202,7 @@ a {
 	justify-content: space-between;
 }
 
+
 /* ---------- left sidebar ---------- */
 .left-sidebar {
 	flex-basis: 25%;
@@ -133,6 +211,7 @@ a {
 	top: 73px;
 }
 
+/* --- profile box --------- */
 .sidebar-profile-box {
 	background: #fff;
 }
@@ -200,7 +279,9 @@ a {
 	width: 20px;
 	margin-right: 10px;
 }
+/* --- end profile box ----- */
 
+/* --- activity ------------ */
 .sidebar-activity {
 	background: #fff;
 	padding: 5px 25px;
@@ -241,8 +322,10 @@ a {
 	display: inline-block;
 	margin: 10px 0;
 }
+/* --- end activity -------- */
+/* ---------- end left sidebar ------ */
 
-/* ---------- right sidebar ---------- */
+/* ---------- right sidebar --------- */
 .right-sidebar {
 	flex-basis: 25%;
 	align-self: flex-start;
@@ -250,6 +333,7 @@ a {
 	top: 73px;
 }
 
+/* --- news ---------------- */
 .sidebar-news {
 	background: #fff;
 	padding: 10px 25px;
@@ -285,7 +369,9 @@ a {
 	font-weight: 500;
 	margin: 20px 0 10px;
 }
+/* --- end news ------------ */
 
+/* --- ad ------------------ */
 .sidebar-ad {
 	background: #fff;
 	padding: 15px 25px;
@@ -316,7 +402,6 @@ a {
 	margin-top: 10px;
 }
 
-
 .ad-link {
 	display: inline-block;
 	border: 1px solid #045be6;
@@ -326,7 +411,9 @@ a {
 	font-weight: 500;
 	margin: 20px auto 10px;
 }
+/* --- end ad -------------- */
 
+/* --- useful links -------- */
 .sidebar-useful-links {
 	padding: 15px 25px;
 	text-align: center;
@@ -351,13 +438,13 @@ a {
 	width: 18px;
 	margin-right: 4px;
 }
-
+/* --- end useful links ---- */
 
 /* ----------- main content ----------- */
 .main-content {
 	flex-basis: 47%;
 }
-
+/* --- create post --------- */
 .create-post {
 	background: #fff;
 }
@@ -416,7 +503,9 @@ a {
 	border-top: 0;
 	border-right: 0;
 }
+/* --- end create post ----- */
 
+/* --- sort by ------------- */
 .sort-by {
 	display: flex;
 	align-items: center;
@@ -444,7 +533,9 @@ a {
 	width: 12px;
 	margin-left: 3px;
 }
+/* --- end sort by --------- */
 
+/* --- post ---------------- */
 .post {
 	background: #fff;
 	padding: 20px 25px 5px;
@@ -532,77 +623,8 @@ a {
 	width: 18px;
 	margin-left: 8px;
 }
-
-
-/* ------ profile menu drop-down -------*/
-.profile-menu-wrap {
-	position: absolute;
-	top: 100%;
-	right: 5%;
-	width: 320px;
-	max-height: 0;
-	overflow: hidden;
-	transition: max-height 0.5s;
-}
-
-.profile-menu-wrap.open-menu {
-	max-height: 400px;
-}
-
-.profile-menu {
-	background: #222;
-	color: #fff;
-	padding: 20px;
-	margin: 10px;
-}
-
-.user-info {
-	display: flex;
-	align-items: center;
-}
-
-.user-info img {
-	width: 50px;
-	border-radius: 50%;
-	margin-right: 15px;
-}
-
-.user-info h3 {
-	font-weight: 500;
-	margin-bottom: -7px;
-}
-
-.user-info a {
-	color: #c9dbf8;
-	font-size: 13px;
-}
-
-.profile-menu hr {
-	border: 0;
-	height: 1px;
-	width: 100%;
-	background: #fff;
-	margin: 15px 0 10px;
-}
-
-.profile-menu-link {
-	display: flex;
-	align-items: center;
-	color: #fff;
-	margin: 12px 0;
-	font-size: 14px;
-}
-
-.profile-menu-link p {
-	width: 100%;
-}
-
-.profile-menu-link img {
-	width: 35px;
-	border-radius: 50%;
-	margin-right: 15px;
-}
-
+/* --- end post ------------ */
+/* ----------- end main content ------- */
 
 /* ----------- profile page ------------*/
 .profile-main {
@@ -616,6 +638,7 @@ a {
 	top: 73px;
 }
 
+/* --- short desc ---------- */
 .profile-container {
 	background: #fff;
 }
@@ -685,6 +708,7 @@ a {
 	background: #045be6;
 	color: #fff;
 }
+/* --- end short desc ------ */
 
 .profile-description {
 	background: #fff;
@@ -698,11 +722,13 @@ a {
 	font-weight: 600;
 }
 
+/* --- about desc ---------- */
 .see-more-link {
 	display: block;
 	text-align: right;
 	font-size: 15px;
 }
+/* --- end about desc ------ */
 
 .profile-desc-row {
 	display: flex;
@@ -742,6 +768,7 @@ a {
 	margin-top: 10px;
 }
 
+/* --- experience desc ----- */
 .experience-link {
 	display: flex;
 	align-items: center;
@@ -754,7 +781,9 @@ a {
 	width: 20px;
 	margin-left: 8px;
 }
+/* --- end experience desc - */
 
+/* --- skills desc --------- */
 .skills-btn {
 	display: inline-block;
 	margin: 10px 5px;
@@ -764,7 +793,9 @@ a {
 	font-size: 12px;
 	font-weight: 500;
 }
+/* --- end skills desc ------ */
 
+/* --- lang desc ------------ */
 .language-btn {
 	display: inline-block;
 	margin: 10px 5px;
@@ -773,9 +804,9 @@ a {
 	font-size: 12px;
 	font-weight: 500;
 }
+/* --- end lang desc --------- */
 
-
-/* -------profile right eidebar --------*/
+/* ------- profile right sidebar -------*/
 .profile-sidebar .sidebar-ad {
 	margin: 0;
 }
@@ -819,7 +850,9 @@ a {
 	border-radius: 30px;
 	font-weight: 500;
 }
+/* ------- end profile right sidebar ---*/
 
+/* ------- profile footer --------------*/
 .profile-footer {
 	padding: 0 6% 30px;
 }
@@ -832,6 +865,8 @@ a {
 .profile-footer .copyright-msg {
 	justify-content: flex-start;
 }
+/* ------- end profile footer ----------*/
+
 
 #showMoreLink {
 	display: none;
