@@ -118,6 +118,11 @@ a {
 .sticky {
 	position: sticky;
 }
+
+.active-lnk {
+	background: var(--active-color);
+	color: #fff;
+}
 /* ------------- end effects --------- */
 
 /* ------------- navbar ------------- */
@@ -523,8 +528,6 @@ padding: 0;
 }
 
 .create-post-links li:last-child {
-	background: var(--active-color);
-	color: #fff;
 	border-top: 0;
 	border-right: 0;
 }
