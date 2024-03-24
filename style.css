@@ -50,7 +50,7 @@ a {
 /* ------------- end common styles --------- */
 
 /* ------------- effects ------------- */
-.underline-eff::after {
+.underline-eff::after { /* needs the current elem being positioned */
 	content: '';
 	width: 0;
 	height: 2px;
@@ -63,6 +63,34 @@ a {
 .underline-eff:hover::after,
 .underline-eff-active::after {
 	width: 100%;
+}
+
+.online {
+	position: relative;
+}
+
+.online::after {
+	content: '';
+	width: 7px;
+	height: 7px;
+	border: 2px solid var(--panel-bg-color);
+	border-radius: 50%;
+	right: 0;
+	top: 0;
+	background: var(--online-color);
+	position: absolute;
+}
+
+.drop-down-eff { /* sets on target's parent elm, needs the parent elem being positioned */
+	position: absolute;
+	/*top: 100%; right: 5%; sets on the target*/
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.5s;
+}
+
+.drop-down-eff-open {
+	/*max-height: 400px; sets on the target*/
 }
 /* ------------- end effects --------- */
 
@@ -140,40 +168,20 @@ a {
 	cursor: pointer;
 	position: relative;
 }
-
-.online {
-	position: relative;
-}
-
-.online::after {
-	content: '';
-	width: 7px;
-	height: 7px;
-	border: 2px solid var(--panel-bg-color);
-	border-radius: 50%;
-	right: 0;
-	top: 0;
-	background: var(--online-color);
-	position: absolute;
-}
 /* --- end nav right side -- */
 
 /* --- menu drop-down ------ */
-.profile-menu-wrap {
-	position: absolute;
+.profile-menu-wrap.drop-down-eff {
 	top: 100%;
 	right: 5%;
-	width: 320px;
-	max-height: 0;
-	overflow: hidden;
-	transition: max-height 0.5s;
 }
 
-.profile-menu-wrap.open-menu {
+.profile-menu-wrap.drop-down-eff-open {
 	max-height: 400px;
 }
 
 .profile-menu {
+	width: 320px;
 	background: var(--modal-bg-color);
 	color: var(--modal-text-pri-color);
 	padding: 20px;
