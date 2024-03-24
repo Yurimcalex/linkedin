@@ -47,6 +47,28 @@ a {
 	padding: 15px 25px;
 	background: var(--panel-bg-color);
 }
+
+.flex-center-between {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.flex-center-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.flex-center-none {
+	display: flex;
+	align-items: center;
+}
+
+.flex-start-none {
+	display: flex;
+	align-items: flex-start;
+}
 /* ------------- end common styles --------- */
 
 /* ------------- effects ------------- */
@@ -96,9 +118,6 @@ a {
 
 /* ------------- navbar ------------- */
 .navbar {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
 	position: sticky;
 	top: 0;
 	padding: 6px 6%;
@@ -107,11 +126,6 @@ a {
 }
 
 /* ----- nav left side ----- */
-.navbar-left {
-	display: flex;
-	align-items: center;
-}
-
 .logo img {
 	width: 30px;
 	margin-right: 15px;
@@ -122,8 +136,6 @@ a {
 	background: var(--page-bg-color);
 	width: 250px;
 	border-radius: 20px;
-	display: flex;
-	align-items: center;
 	padding: 0 15px;
 }
 
@@ -147,8 +159,6 @@ a {
 }
 
 .navbar-center ul li a {
-	display: flex;
-	align-items: center;
 	font-size: 14px;
 	margin: 5px 8px;
 	padding-right: 5px;
@@ -188,11 +198,6 @@ a {
 	margin: 10px;
 }
 
-.user-info {
-	display: flex;
-	align-items: center;
-}
-
 .user-info img {
 	width: 50px;
 	border-radius: 50%;
@@ -218,8 +223,6 @@ a {
 }
 
 .profile-menu-link {
-	display: flex;
-	align-items: center;
 	color: var(--modal-text-pri-color);
 	margin: 12px 0;
 	font-size: 14px;
@@ -299,16 +302,11 @@ padding: 0;
 }
 
 .sidebar-profile-link {
-	display: flex;
-	align-items: center;
 	border-top: 1px solid var(--border-color1);
 }
 
 .sidebar-profile-link a {
 	flex-basis: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 	padding: 15px 0;
 	font-size: 13px;
 	border-left: 1px solid var(--border-color1);
@@ -339,8 +337,6 @@ padding: 0;
 }
 
 .sidebar-activity a {
-	display: flex;
-	align-items: center;
 	font-size: 12px;
 	font-weight: 500;
 	color: var(--text-high3-color);
@@ -467,9 +463,6 @@ padding: 0;
 }
 
 .copyright-msg {
-	display: flex;
-	align-items: center;
-	justify-content: center;
 	font-size: 12px;
 	margin-top: 10px;
 	font-weight: 500;
@@ -492,8 +485,6 @@ padding: 0;
 
 .create-post-input {
 	padding: 20px 25px 10px;
-	display: flex;
-	align-items: flex-start;
 }
 
 .create-post-input img {
@@ -515,11 +506,6 @@ padding: 0;
 	font-weight: 500;
 }
 
-.create-post-links {
-	display: flex;
-	align-items: flex-start;
-}
-
 .create-post-links li {
 	list-style: none;
 	border-top: 1px solid var(--border-color1);
@@ -527,9 +513,6 @@ padding: 0;
 	flex-basis: 25%;
 	height: 40px;
 	font-size: 13px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 	cursor: pointer;
 }
 
@@ -548,8 +531,6 @@ padding: 0;
 
 /* --- sort by ------------- */
 .sort-by {
-	display: flex;
-	align-items: center;
 	margin: 10px 0;
 }
 
@@ -584,8 +565,6 @@ padding: 0;
 }
 
 .post-author {
-	display: flex;
-	align-items: flex-start;
 	margin-bottom: 20px;
 }
 
@@ -613,18 +592,10 @@ padding: 0;
 }
 
 .post-stats {
-	display: flex;
 	flex-wrap: wrap;
-	align-items: center;
-	justify-content: space-between;
 	font-size: 12px;
 	border-bottom: 1px solid var(--border-color1);
 	padding-bottom: 6px;
-}
-
-.post-stats div {
-	display: flex;
-	align-items: center;
 }
 
 .post-stats img {
@@ -637,17 +608,9 @@ padding: 0;
 }
 
 .post-activity {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
 	padding: 10px 0;
 	font-size: 14px;
 	font-weight: 500;
-}
-
-.post-activity div {
-	display: flex;
-	align-items: center;
 }
 
 .post-activity-user-icon {
@@ -716,8 +679,6 @@ padding: 0;
 }
 
 .mutual-connection {
-	display: flex;
-	align-items: center;
 	margin: 20px 0;
 }
 
@@ -771,8 +732,6 @@ padding: 0;
 /* --- end about desc ------ */
 
 .profile-desc-row {
-	display: flex;
-	align-items: flex-start;
 	margin: 20px 0;
 }
 
@@ -810,9 +769,6 @@ padding: 0;
 
 /* --- experience desc ----- */
 .experience-link {
-	display: flex;
-	align-items: center;
-	justify-content: center;
 	padding-top: 20px;
 	font-weight: 500;
 }
@@ -863,8 +819,6 @@ padding: 0;
 }
 
 .sidebar-people-row {
-	display: flex;
-	align-items: flex-start;
 	margin: 6px 0;
 }
 
