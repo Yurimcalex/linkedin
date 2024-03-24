@@ -23,9 +23,9 @@
 	--border-color3: #777;
 	
 	--btn-bg1-color: #e4e6eb;
-	
 }
 
+/* ------------- common styles ------------- */
 * {
 	margin: 0;
 	padding: 0;
@@ -43,6 +43,12 @@ a {
 	color: var(--text-main-color);
 }
 
+.panel {
+	padding: 15px 25px;
+	background: var(--panel-bg-color);
+}
+/* ------------- end common styles --------- */
+
 /* ------------- navbar ------------- */
 .navbar {
 	display: flex;
@@ -52,7 +58,6 @@ a {
 	top: 0;
 	padding: 6px 6%;
 	z-index: 100;
-	background: var(--panel-bg-color);
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -235,13 +240,13 @@ a {
 .left-sidebar {
 	flex-basis: 25%;
 	align-self: flex-start;
-	position: sticky;
+	/*position: sticky;*/
 	top: 73px;
 }
 
 /* --- profile box --------- */
-.sidebar-profile-box {
-	background: var(--panel-bg-color);
+.sidebar-profile {
+padding: 0;
 }
 
 .sidebar-profile-info {
@@ -311,8 +316,8 @@ a {
 
 /* --- activity ------------ */
 .sidebar-activity {
-	background: var(--panel-bg-color);
-	padding: 5px 25px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 	margin: 12px 0;
 }
 
@@ -357,14 +362,14 @@ a {
 .right-sidebar {
 	flex-basis: 25%;
 	align-self: flex-start;
-	position: sticky;
+	/*position: sticky;*/
 	top: 73px;
 }
 
 /* --- news ---------------- */
 .sidebar-news {
-	background: var(--panel-bg-color);
-	padding: 10px 25px;
+	padding-top: 10px;
+	padding-bottom: 5px;
 }
 
 .info-icon {
@@ -401,8 +406,6 @@ a {
 
 /* --- ad ------------------ */
 .sidebar-ad {
-	background: var(--panel-bg-color);
-	padding: 15px 25px;
 	text-align: center;
 	margin: 12px 0;
 	font-size: 12px;
@@ -443,8 +446,8 @@ a {
 
 /* --- useful links -------- */
 .sidebar-useful-links {
-	padding: 15px 25px;
 	text-align: center;
+	background: transparent;
 }
 
 .sidebar-useful-links a {
@@ -474,7 +477,7 @@ a {
 }
 /* --- create post --------- */
 .create-post {
-	background: var(--panel-bg-color);
+	padding: 0;
 }
 
 .create-post-input {
@@ -565,8 +568,8 @@ a {
 
 /* --- post ---------------- */
 .post {
-	background: var(--panel-bg-color);
-	padding: 20px 25px 5px;
+	padding-top: 20px;
+	padding-bottom: 5px;
 	margin: 5px 0 15px;
 }
 
@@ -662,13 +665,13 @@ a {
 .profile-sidebar {
 	flex-basis: 25%;
 	align-self: flex-start;
-	position: sticky;
+	/*position: sticky;*/
 	top: 73px;
 }
 
 /* --- short desc ---------- */
 .profile-container {
-	background: var(--panel-bg-color);
+	padding: 0;
 }
 
 .profile-container-inner {
@@ -739,7 +742,6 @@ a {
 /* --- end short desc ------ */
 
 .profile-description {
-	background: var(--panel-bg-color);
 	padding: 20px 4% 30px;
 	margin: 12px 0;
 }
@@ -840,8 +842,6 @@ a {
 }
 
 .sidebar-people {
-	background: var(--panel-bg-color);
-	padding: 15px 25px;
 	margin: 12px 0;
 	font-size: 12px;
 }
