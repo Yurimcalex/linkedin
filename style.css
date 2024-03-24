@@ -114,11 +114,14 @@ a {
 .drop-down-eff-open {
 	/*max-height: 400px; sets on the target*/
 }
+
+.sticky {
+	position: sticky;
+}
 /* ------------- end effects --------- */
 
 /* ------------- navbar ------------- */
 .navbar {
-	position: sticky;
 	top: 0;
 	padding: 6px 6%;
 	z-index: 100;
@@ -253,7 +256,6 @@ a {
 .left-sidebar {
 	flex-basis: 25%;
 	align-self: flex-start;
-	/*position: sticky;*/
 	top: 73px;
 }
 
@@ -368,7 +370,6 @@ padding: 0;
 .right-sidebar {
 	flex-basis: 25%;
 	align-self: flex-start;
-	/*position: sticky;*/
 	top: 73px;
 }
 
@@ -638,7 +639,6 @@ padding: 0;
 .profile-sidebar {
 	flex-basis: 25%;
 	align-self: flex-start;
-	/*position: sticky;*/
 	top: 73px;
 }
 
