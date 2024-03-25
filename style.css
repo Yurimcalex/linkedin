@@ -962,3 +962,36 @@ padding: 0;
 		display: block;
 	}
 }
+
+/* --- media query for medium screen - navbar adjusting --- */
+@media only screen and (min-width: 601px) and (max-width: 1055px) {
+	.navbar-left {
+		width: 30%;
+	}
+
+	.navbar-center ul li a {
+		display: inline-block;
+		text-align: center;
+		margin: 5px 5px;
+		padding-right: 0;
+	}
+
+	.navbar-center ul li span {
+		display: block;
+		font-size: 10px;
+	}
+
+	.underline-eff::after {
+		left: 0;
+	}
+
+	.navbar-center {
+		flex: 1;
+		
+	}
+
+	.navbar-center ul {
+		display: flex;
+		justify-content: space-around;
+	}
+}
