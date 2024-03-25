@@ -995,3 +995,67 @@ padding: 0;
 		justify-content: space-around;
 	}
 }
+
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+	.container {
+		padding: 10px 3%;
+		justify-content: space-around;
+	}
+
+	.left-sidebar,
+	.right-sidebar,
+	.profile-sidebar {
+		position: initial;
+	}
+
+	.left-sidebar {
+		flex-basis: 33%;
+	}
+
+	.main-content {
+		flex-basis: 58%;
+	}
+
+	.right-sidebar {
+		flex-basis: 95.5%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.right-sidebar div {
+		flex-basis: 33%;
+	}
+
+	.right-sidebar .sidebar-ad {
+		margin: 0;
+		align-self: stretch;
+	}
+
+	.profile-main {
+		flex-basis: 93%;
+	}
+
+	.profile-footer .sidebar-useful-links {
+		text-align: center;
+	}
+
+	.profile-footer .copyright-msg {
+		justify-content: center;
+	}
+
+	.profile-sidebar {
+		flex-basis: 93%;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.profile-sidebar div {
+		flex-basis: 49%;
+	}
+
+	.sidebar-people {
+		margin: 0;
+	}
+}
