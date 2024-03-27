@@ -62,28 +62,30 @@ const getCSSCustomPropIndex = () =>
       finalArr.concat(
         getCssRules(sheet).filter(isStyleRule).reduce((propValArr, rule) => {
           const props = [...rule.style]
-            .map((propName) => [
-              propName.trim(),
-              rule.style.getPropertyValue(propName).trim()
-            ])
-            .filter(([propName]) => propName.indexOf("--") === 0);
-           return [...propValArr, ...props];
+            .map(propName => propName.trim())
+            .filter(propName => propName.indexOf("--") === 0);
+          return [...propValArr, ...props];
         }, [])
       ),
     []
   );
 
 
-let cssVars = getCSSCustomPropIndex();
-let colors = cssVars.filter(item => item[0].indexOf('color') !== -1);
+let colorNames = getCSSCustomPropIndex()
+  .filter(item => item.indexOf('color') !== -1);
 
 function invert(colors) {
-  return colors.map(color => [color[0], invertColor(color[1])]);
+  return colors.map(color => invertColor(color));
 }
 
 function setColors(colors) {
   let root = document.documentElement;
-  colors.forEach(color => root.style.setProperty(...color));
-} 
+  colors.forEach((color, ind) => root.style.setProperty(colorNames[ind], color));
+}
 
-//setColors(invert(colors, true));
+function invertTheme() {
+  let root = document.documentElement;
+  let style = getComputedStyle(root);
+  let colors = colorNames.map(name => style.getPropertyValue(name).trim());
+  setColors(invert(colors));
+}
