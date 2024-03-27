@@ -42,13 +42,25 @@ const isSameDomain = (styleSheet) => {
   return styleSheet.href.indexOf(window.location.origin) === 0;
 };
 
-const isStyleRule = (rule) => rule.type === 1;
+const isStyleRule = (rule) => {
+  return rule.type === 1 || rule.type === 3;
+};
+
+const getCssRules = (sheet) => {
+  let cssRules = [...sheet.cssRules]
+    .filter(isStyleRule)
+    .map(rule => rule.type === 3 ? [...rule.styleSheet.cssRules] : rule);
+  if (Array.isArray(cssRules[0])) {
+    cssRules = cssRules.reduce((acc, rules) => [...acc, ...rules], []);
+  }
+  return cssRules;
+};
 
 const getCSSCustomPropIndex = () =>
   [...document.styleSheets].filter(isSameDomain).reduce(
     (finalArr, sheet) =>
       finalArr.concat(
-        [...sheet.cssRules].filter(isStyleRule).reduce((propValArr, rule) => {
+        getCssRules(sheet).filter(isStyleRule).reduce((propValArr, rule) => {
           const props = [...rule.style]
             .map((propName) => [
               propName.trim(),
@@ -61,6 +73,7 @@ const getCSSCustomPropIndex = () =>
     []
   );
 
+
 let cssVars = getCSSCustomPropIndex();
 let colors = cssVars.filter(item => item[0].indexOf('color') !== -1);
 
@@ -71,6 +84,6 @@ function invert(colors) {
 function setColors(colors) {
   let root = document.documentElement;
   colors.forEach(color => root.style.setProperty(...color));
-}
+} 
 
 //setColors(invert(colors, true));
