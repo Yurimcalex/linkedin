@@ -55,7 +55,7 @@
 					<p>Give Feedback</p>
 					<span>></span>
 				</a>
-				<a href="#" class="flex-center-none profile-menu-link">
+				<a href="#" class="flex-center-none profile-menu-link" id="settingsLink">
 					<img src="images/setting.png" alt="setting">
 					<p>Settings & Privacy</p>
 					<span>></span>
@@ -80,7 +80,7 @@
 		<!-- ----------------- end nav profile menu ------------ -->
 
 		<!-- ----------------- settings menu ------------------- -->
-		<div class="settings-menu profile-menu-wrap drop-down-eff drop-down-eff-open">
+		<div class="settings-menu profile-menu-wrap drop-down-eff" id="settingsMenu">
 			<div class="profile-menu">
 				<div class="flex-center-none user-info">
 					<img src="images/setting.png" alt="setting">
@@ -435,6 +435,32 @@
 				showMoreLink.innerHTML = 'Show more <b>+<b>';
 			}
 		}
+	</script>
+
+	<script>
+		let colorsInvertor = document.getElementById('colorsInvertor');
+		let colorsSlider = document.querySelector('#colorsInvertor .slider');
+		let settingsLink = document.getElementById('settingsLink');
+		let settingsMenu = document.getElementById('settingsMenu');
+
+		function toggleSlider(slider) {
+			slider.classList.toggle('enable');
+		}
+
+		function toggleSettingsMenu() {
+			settingsMenu.classList.toggle('drop-down-eff-open');
+		}
+
+		colorsInvertor.onclick = function () {
+  		toggleSlider(colorsSlider);
+  		invertTheme();
+  		toggleSettingsMenu();
+		};
+
+		settingsLink.onclick = function () {
+			toggleMenu();
+			toggleSettingsMenu();
+		};
 	</script>
 </body>
 </html>
