@@ -1,0 +1,133 @@
+:root {
+	/* --------- colors --------- */
+	--page-bg-color: #f0f2f5;
+	
+	--panel-bg-color: #fff;
+
+	--active-color: #045be6;
+	--online-color: #41db51;
+
+	--modal-bg-color: #222;
+	--modal-text-pri-color: #fff;
+	--modal-text-sec-color: #c9dbf8;
+
+  --text-main-color: #5f5f5f;
+	--text-high1-color: #222;
+	--text-high2-color: #777;
+	--text-high3-color: #888;
+	--text-high4-color: #333;
+	--text-high5-color: #ccc;
+
+	--border-color1: #ccc;
+	--border-color2: #999;
+	--border-color3: #777;
+	
+	--btn-bg1-color: #e4e6eb;
+}
+
+/* ------------- common styles ------------- */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', 'sans-serif';
+}
+
+body {
+	background: var(--page-bg-color);
+	color: var(--text-main-color);
+}
+
+a {
+	text-decoration: none;
+	color: var(--text-main-color);
+}
+
+.panel {
+	padding: 15px 25px;
+	background: var(--panel-bg-color);
+}
+
+.flex-center-between {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.flex-center-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.flex-center-none {
+	display: flex;
+	align-items: center;
+}
+
+.flex-start-none {
+	display: flex;
+	align-items: flex-start;
+}
+
+.container {
+	padding: 20px 6%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+/* ------------- end common styles --------- */
+
+/* ------------- effects ------------- */
+.underline-eff::after { /* needs the current elem being positioned */
+	content: '';
+	width: 0;
+	height: 2px;
+	background: var(--active-color);
+	position: absolute;
+	bottom: -15px;
+	transition: width 0.3s;
+}
+
+.underline-eff:hover::after,
+.underline-eff-active::after {
+	width: 100%;
+}
+
+.online {
+	position: relative;
+}
+
+.online::after {
+	content: '';
+	width: 7px;
+	height: 7px;
+	border: 2px solid var(--panel-bg-color);
+	border-radius: 50%;
+	right: 0;
+	top: 0;
+	background: var(--online-color);
+	position: absolute;
+}
+
+.drop-down-eff { /* sets on target's parent elm, needs the parent elem being positioned */
+	position: absolute;
+	/*top: 100%; right: 5%; sets on the target*/
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.5s;
+}
+
+.drop-down-eff-open {
+	/*max-height: 400px; sets on the target*/
+}
+
+.sticky {
+	position: sticky;
+}
+
+.active-lnk {
+	background: var(--active-color);
+	color: #fff;
+}
+/* ------------- end effects --------- */
