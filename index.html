@@ -34,7 +34,7 @@
 		<!-- ----------------- nav right side ------------------ -->
 		<div class="navbar-right">
 			<div class="online">
-				<img src="images/user-1.png" alt="user" class="nav-profile-img" onclick="toggleMenu()">
+				<img src="images/user-1.png" alt="user" class="nav-profile-img" onclick="onProfileImgClick()">
 			</div>
 		</div>
 		<!-- ----------------- end nav right side -------------- -->
@@ -449,6 +449,12 @@
 
 		function toggleSettingsMenu() {
 			settingsMenu.classList.toggle('drop-down-eff-open');
+		}
+
+		function onProfileImgClick() {
+			if (!settingsMenu.classList.contains('drop-down-eff-open')) {
+				toggleMenu();
+			}
 		}
 
 		colorsInvertor.onclick = function () {
