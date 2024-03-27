@@ -132,7 +132,16 @@
 .settings-menu .profile-menu-link p {
 	width: initial;
 }
-/* --- end settings menu --- */
+
+.settings-menu > span {
+	position: absolute;
+	top: 15px;
+	right: 20px;
+	color: var(--modal-text-pri-color);
+	font-size: 20px;
+	cursor: pointer;
+}
+
 .slider {
   width: 30px;
   height: 10px;
@@ -156,4 +165,5 @@
 .slider.enable:after {
   left: 14px;
 }
+/* --- end settings menu --- */
 /* ------------- end navbar --------- */
