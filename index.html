@@ -5,7 +5,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Social Media Website</title>
 	<link rel="stylesheet" href="styles/index.css">
-	<script src="js/colorTheme.js"></script>
 </head>
 <body>
 	<!-- ------------------- navigation bar ------------------ -->
@@ -34,7 +33,7 @@
 		<!-- ----------------- nav right side ------------------ -->
 		<div class="navbar-right">
 			<div class="online">
-				<img src="images/user-1.png" alt="user" class="nav-profile-img" onclick="onProfileImgClick()">
+				<img src="images/user-1.png" alt="user" class="nav-profile-img">
 			</div>
 		</div>
 		<!-- ----------------- end nav right side -------------- -->
@@ -92,7 +91,7 @@
 					<div class="slider"></div>
 				</a>
 			</div>
-			<span onclick="toggleSettingsMenu()">x</span>
+			<span>x</span>
 		</div>
 		<!-- ----------------- end settings menu --------------- -->
 	</nav>
@@ -418,12 +417,6 @@
 		<!-- ------------------- end right sidebar ------------- -->
 	</div>
 
-	<script>
-		let profileMenu = document.getElementById('profileMenu');
-		function toggleMenu() {
-			profileMenu.classList.toggle('drop-down-eff-open');
-		}
-	</script>
 
 	<script>
 		let sidebarActivity = document.getElementById('sidebarActivity');
@@ -438,36 +431,7 @@
 		}
 	</script>
 
-	<script>
-		let colorsInvertor = document.getElementById('colorsInvertor');
-		let colorsSlider = document.querySelector('#colorsInvertor .slider');
-		let settingsLink = document.getElementById('settingsLink');
-		let settingsMenu = document.getElementById('settingsMenu');
-
-		function toggleSlider(slider) {
-			slider.classList.toggle('enable');
-		}
-
-		function toggleSettingsMenu() {
-			settingsMenu.classList.toggle('drop-down-eff-open');
-		}
-
-		function onProfileImgClick() {
-			if (!settingsMenu.classList.contains('drop-down-eff-open')) {
-				toggleMenu();
-			}
-		}
-
-		colorsInvertor.onclick = function () {
-  		toggleSlider(colorsSlider);
-  		invertTheme();
-  		//toggleSettingsMenu();
-		};
-
-		settingsLink.onclick = function () {
-			toggleMenu();
-			toggleSettingsMenu();
-		};
-	</script>
+	<script src="js/colorTheme.js"></script>
+	<script src="index.js"></script>
 </body>
 </html>
